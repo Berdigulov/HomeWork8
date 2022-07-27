@@ -7,12 +7,13 @@ public class TrickyBastard extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-            if (getHealth() >= 250) {
-                setHealth(0);
-                setDamage(0);
-            } else if (getHealth() < 250){
-                setHealth(249);
-            setDamage(12);}
+        if (getHealth() >= 251) {
+            setHealth(0);
+            setDamage(0);
+        } else if (getHealth() < 250) {
+            setHealth(getHealth());
+            setDamage(getDamage());
+        }
     }
 }
 

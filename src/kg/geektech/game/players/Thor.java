@@ -10,9 +10,12 @@ public class Thor extends Hero{
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
         int stun= RPG_Game.random.nextInt(11)+1;
-        if (stun>6){
+        if (stun>1){
             boss.setDamage(0);
             System.out.println("Boss got stunned for 1 round");
-        }else boss.setDamage(boss.getDamage());
+        }else
+            boss.setDamage(boss.getDamage());{
+        }
     }
 }
+
